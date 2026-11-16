@@ -1,5 +1,3 @@
-# -*- python -*-
-# -*- coding: utf-8 -*-
 #
 # Gramps - a GTK+/GNOME based genealogy program
 #
@@ -20,9 +18,10 @@
 #
 
 """
-Return the places located in a region around some coordinates.
+Place region utility functions.
 
-This module only needs a database. No GUI, no map and no network are
+Return the places located in a region around some coordinates. This
+module only needs a database. No GUI, no map and no network are
 required. It reuses the same code type as the place selection dialog
 used by the geography views.
 """
@@ -39,8 +38,8 @@ import math
 # Gramps modules
 #
 # -------------------------------------------------------------------------
-from gramps.gen.lib import PlaceType
-from gramps.gen.utils.place import conv_lat_lon
+from ..lib import PlaceType
+from .place import conv_lat_lon
 
 
 def get_location(db, place):
